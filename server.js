@@ -1,10 +1,13 @@
 import mongoose from "mongoose";
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import userRouter from "./routes/userRoute.js";
+
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const dbuser = process.env.DBUSER;
 const dbpass = process.env.DBPASS;
 
